@@ -39,20 +39,15 @@
         ],
         "plugins": [    
           ["@semantic-release/commit-analyzer", {
-            "preset": "conventionalcommits",
-            "parserOpts": {
-                "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
-            }
+            "preset": "conventionalcommits"
           }],
           ["@semantic-release/release-notes-generator", {
             "preset": "conventionalcommits",
-            "parserOpts": {
-              "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
-            },
-            "writerOpts": {
-              "commitsSort": ["subject", "scope"]
-            }
-          }],
+            "presetConfig": {
+                "issuePrefixes": ["AB#"],
+                "issueUrlFormat": "https://github.com/kumvijaya/semantic-release-tester/issues/edit/{{id}}"
+              }
+           }],
           "@semantic-release/changelog",
           "@semantic-release/git",
           "@semantic-release/github"
