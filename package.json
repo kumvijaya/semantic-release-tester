@@ -48,11 +48,11 @@
                     "release": "major"
                   },
                   {
-                    "message": "*\\[bug-fix\\]*",
+                    "message": "*\\[bugfix\\]*",
                     "release": "patch"
                   },
                   {
-                    "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                    "message": "!(*\\[major\\]*|*\\[bugfix\\]*)",
                     "release": "minor"
                   }
                 ]
@@ -70,12 +70,12 @@
                       "hidden": false
                     },
                     {
-                      "message": "*\\[bug-fix\\]*",
+                      "message": "*\\[bugfix\\]*",
                       "section": "🐛 Bug-Fix",
                       "hidden": false
                     },
                     {
-                      "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                      "message": "!(*\\[major\\]*|*\\[bugfix\\]*)",
                       "section": "📝 Minor Changes",
                       "hidden": false
                     }
