@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/kumvijaya/semantic-release-tester/compare/v2.2.1...v2.2.2) (2023-04-22)
+
+
+### Bug Fixes
+
+* **ci:** update in workflow yml for commit check ([5628e1f](https://github.com/kumvijaya/semantic-release-tester/commit/5628e1f2dd100ec6757b659ba453ce07fd28621d))
+
 ## [2.2.1](https://github.com/kumvijaya/semantic-release-tester/compare/v2.2.0...v2.2.1) (2023-04-22)
 
 
