@@ -25,9 +25,73 @@
       "semantic-release": "^17.3.4"
     },
     "release": {
-      "branches": [
-        "main",
-        "master"
-      ]
-    }
+        "branches": [
+          "master",
+          "main",
+          {
+            "name": "beta",
+            "prerelease": true
+          },
+          {
+            "name": "alpha",
+            "prerelease": true
+          }
+        ],
+        "plugins": [
+          [
+            "@semantic-release/commit-analyzer",
+            {
+              "preset": "conventionalcommits",
+              "releaseRules": [
+                {
+                  "message": "*\\[major\\]*",
+                  "release": "major"
+                },
+                {
+                  "message": "*\\[bug-fix\\]*",
+                  "release": "patch"
+                },
+                {
+                  "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                  "release": "minor"
+                }
+              ]
+            }
+          ],
+          [
+            "@semantic-release/release-notes-generator",
+            {
+              "preset": "conventionalcommits",
+              "presetConfig": {
+                "types": [
+                  {
+                    "message": "*\\[major\\]*",
+                    "section": "✨ Major",
+                    "hidden": false
+                  },
+                  {
+                    "message": "*\\[bug-fix\\]*",
+                    "section": "🐛 Bug-Fix",
+                    "hidden": false
+                  },
+                  {
+                    "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                    "section": "📝 Minor Changes",
+                    "hidden": false
+                  }
+                ]
+              }
+            }
+          ],
+          [
+            "@semantic-release/changelog"
+          ],
+          [
+            "@semantic-release/github"
+          ],
+          [
+            "@semantic-release/git"
+          ]
+        ]
+      }
   }
