@@ -1,0 +1,6 @@
+{
+    "repository": "https://github.com/kumvijaya/semantic-release-tester",
+    "release": {
+      "branches": ["master", "next"]
+    }
+}
