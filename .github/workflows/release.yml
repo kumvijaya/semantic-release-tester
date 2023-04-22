@@ -21,9 +21,6 @@ jobs:
         id: semantic
         with:
           semantic_version: 16
-          extra_plugins: |
-            @semantic-release/changelog
-            @semantic-release/git
           branches: |
             ['main']
         env:
