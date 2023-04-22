@@ -37,39 +37,61 @@
             "prerelease": true
           }
         ],
-        "plugins": [   
-          ["@semantic-release/commit-analyzer", {
-            "preset": "conventionalcommits",
-            "releaseRules": [
-              {"type": "improvement", "release": "minor"},
-              {"type": "major", "release": "major"},
-              {"type": "bugfix", "release": "patch"}
+        "plugins": [
+            [
+              "@semantic-release/commit-analyzer",
+              {
+                "preset": "eslint",
+                "releaseRules": [
+                  {
+                    "message": "*\\[major\\]*",
+                    "release": "major"
+                  },
+                  {
+                    "message": "*\\[bug-fix\\]*",
+                    "release": "patch"
+                  },
+                  {
+                    "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                    "release": "minor"
+                  }
+                ]
+              }
+            ],
+            [
+              "@semantic-release/release-notes-generator",
+              {
+                "preset": "eslint",
+                "presetConfig": {
+                  "types": [
+                    {
+                      "message": "*\\[major\\]*",
+                      "section": "✨ Major",
+                      "hidden": false
+                    },
+                    {
+                      "message": "*\\[bug-fix\\]*",
+                      "section": "🐛 Bug-Fix",
+                      "hidden": false
+                    },
+                    {
+                      "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                      "section": "📝 Minor Changes",
+                      "hidden": false
+                    }
+                  ]
+                }
+              }
+            ],
+            [
+              "@semantic-release/changelog"
+            ],
+            [
+              "@semantic-release/github"
+            ],
+            [
+              "@semantic-release/git"
             ]
-          }],
-          ["@semantic-release/release-notes-generator", {
-            "preset": "conventionalcommits",
-            "presetConfig": {
-              "types": [
-                {"type": "feat", "section": "Features"},
-                {"type": "fix", "section": "Bug Fixes"},
-                {"type": "perf", "section": "Performance Improvements"},
-                {"type": "revert", "section": "Reverts"},
-                {"type": "docs", "section": "Documentation", "hidden": true},
-                {"type": "style", "section": "Styles", "hidden": true},
-                {"type": "chore", "section": "Miscellaneous Chores", "hidden": true},
-                {"type": "refactor", "section": "Code Refactoring", "hidden": true},
-                {"type": "test", "section": "Tests", "hidden": true},
-                {"type": "build", "section": "Build System", "hidden": true},
-                {"type": "ci", "section": "Continuous Integration", "hidden": true},
-                {"type": "improvement", "section": "Improvement", "hidden": false},
-                {"type": "bugfix", "section": "BugFix", "hidden": false},
-                {"type": "major", "section": "Major", "hidden": false}
-              ]
-            }
-          }],
-          "@semantic-release/changelog",
-          "@semantic-release/git",
-          "@semantic-release/github"
-        ]
+          ]
       }
   }
