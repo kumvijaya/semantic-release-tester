@@ -43,7 +43,7 @@
             "releaseRules": [
               {"type": "improvement", "release": "minor"},
               {"type": "major", "release": "major"},
-              {"type": "bug-fix", "release": "patch"}
+              {"type": "bugfix", "release": "patch"}
             ]
           }],
           ["@semantic-release/release-notes-generator", {
@@ -62,7 +62,7 @@
                 {"type": "build", "section": "Build System", "hidden": true},
                 {"type": "ci", "section": "Continuous Integration", "hidden": true},
                 {"type": "improvement", "section": "Improvement", "hidden": false},
-                {"type": "bug-fix", "section": "BugFix", "hidden": false},
+                {"type": "bugfix", "section": "BugFix", "hidden": false},
                 {"type": "major", "section": "Major", "hidden": false}
               ]
             }
