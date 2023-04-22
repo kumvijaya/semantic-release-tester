@@ -39,7 +39,21 @@
         ],
         "plugins": [    
           ["@semantic-release/commit-analyzer", {
-            "preset": "conventionalcommits"
+            "preset": "conventionalcommits",
+            "releaseRules": [
+                {
+                  "message": "*\\[major\\]*",
+                  "release": "major"
+                },
+                {
+                  "message": "*\\[bug-fix\\]*",
+                  "release": "patch"
+                },
+                {
+                  "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                  "release": "minor"
+                }
+              ]
           }],
           ["@semantic-release/release-notes-generator", {
             "preset": "conventionalcommits"
