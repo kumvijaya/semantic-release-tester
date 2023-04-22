@@ -1,75 +1,20 @@
-{
-"branches": [
-"master",
-"main",
-{
-"name": "beta",
-"prerelease": true
-},
-{
-"name": "alpha",
-"prerelease": true
-}
-],
-"plugins": [
-[
-"@semantic-release/commit-analyzer",
-{
-"preset": "conventionalcommits",
-"releaseRules": [
-{"message": "*\\[major\\]*", "release": "major"},
-{"message": "*\\[bug-fix\\]*", "release": "patch"},
-{"message": "!(*\\[major\\]*|*\\[bug-fix\\]*)", "release": "minor"}
-]
-}
-],
-[
-"@semantic-release/release-notes-generator",
-{
-"preset": "conventionalcommits",
-"presetConfig": {
-"types": [
-{
-"message": "*\\[major\\]*",
-"section": "✨ Major",
-"hidden": false
-},
-{
-"message": "*\\[bug-fix\\]*",
-"section": "🐛 Bug-Fix",
-"hidden": false
-},
-{
-"message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
-"section": "📝 Minor Changes",
-"hidden": false
-}
-]
-}
-}
-],
-[
-"@semantic-release/changelog"
-],
-[
-"@semantic-release/github"
-],
-[
-"@semantic-release/git"
-]
-]
-}
-- name: Semantic Release
-uses: cycjimmy/semantic-release-action@v3
-id: semantic
-with:
-branch: main
-extra_plugins: |
-@semantic-release/commit-analyzer
-@semantic-release/release-notes-generator
-@semantic-release/github
-@semantic-release/git
-@semantic-release/changelog
-conventional-changelog-conventionalcommits
-env:
-GITHUB_TOKEN: ${{ secrets.PAT }}
+name: Semantic Release
+
+on:
+    workflow_call:
+    workflow_dispatch:
+#     push:
+#        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
