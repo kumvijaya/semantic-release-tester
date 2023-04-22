@@ -61,7 +61,7 @@
                   { "tag": "Breaking", "release": "major" },
                   { "tag": "Build", "release": "minor" },
                   { "tag": "Chore", "release": "minor" },
-                  { "message": "*bugfix*", "section": "FIX" },
+                  { "message": "*bugfix*", "section": "FIX", "hidden": false },
                   { "tag": "New", "release": "minor" },
                   { "tag": "Update", "release": "minor" },
                   { "tag": "Upgrade", "release": "minor" }
