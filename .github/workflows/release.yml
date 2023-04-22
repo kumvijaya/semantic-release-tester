@@ -7,19 +7,25 @@ on:
 #        branches: [main]
     pull_request:
         branches: [main]
-
+        
 jobs:
   release:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
 
-      - name: pat
-        run: |
-          echo ${{ secrets.PAT }}
-          
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic
+        with:
+          semantic_version: 16
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            conventional-changelog-eslint
+          branches: |
+            ['main']
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
