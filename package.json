@@ -42,11 +42,7 @@
             "preset": "conventionalcommits"
           }],
           ["@semantic-release/release-notes-generator", {
-            "preset": "conventionalcommits",
-            "presetConfig": {
-                "issuePrefixes": ["AB#"],
-                "issueUrlFormat": "https://github.com/kumvijaya/semantic-release-tester/issues/edit/{{id}}"
-              }
+            "preset": "conventionalcommits"
            }],
           "@semantic-release/changelog",
           "@semantic-release/git",
