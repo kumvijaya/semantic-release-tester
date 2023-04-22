@@ -37,7 +37,7 @@
             "prerelease": true
           }
         ],
-        "plugins": [
+        "plugins": [    
           [
             "@semantic-release/commit-analyzer",
             {
@@ -58,40 +58,10 @@
               ]
             }
           ],
-          [
-            "@semantic-release/release-notes-generator",
-            {
-              "preset": "conventionalcommits",
-              "presetConfig": {
-                "types": [
-                  {
-                    "message": "*\\[major\\]*",
-                    "section": "✨ Major",
-                    "hidden": false
-                  },
-                  {
-                    "message": "*\\[bug-fix\\]*",
-                    "section": "🐛 Bug-Fix",
-                    "hidden": false
-                  },
-                  {
-                    "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
-                    "section": "📝 Minor Changes",
-                    "hidden": false
-                  }
-                ]
-              }
-            }
-          ],
-          [
-            "@semantic-release/changelog"
-          ],
-          [
-            "@semantic-release/github"
-          ],
-          [
-            "@semantic-release/git"
-          ]
+          "@semantic-release/release-notes-generator",
+          "@semantic-release/changelog",
+          "@semantic-release/git",
+          "@semantic-release/github"
         ]
       }
   }
