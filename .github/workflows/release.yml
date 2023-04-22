@@ -22,6 +22,6 @@ jobs:
         with:
           semantic_version: 16
           branches: |
-            ['main']
+            ['master']
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
