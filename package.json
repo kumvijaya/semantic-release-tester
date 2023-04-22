@@ -48,7 +48,7 @@
                     "release": "major"
                   },
                   {
-                    "message": "*[bugfix]*",
+                    "message": "*bugfix*",
                     "release": "patch"
                   },
                   {
@@ -70,7 +70,7 @@
                       "hidden": false
                     },
                     {
-                      "message": "*\\[bugfix\\]*",
+                      "message": "*bugfix*",
                       "section": "🐛 Bug-Fix",
                       "hidden": false
                     },
