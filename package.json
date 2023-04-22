@@ -43,7 +43,7 @@
             "releaseRules": [
               {"type": "improvement", "release": "minor"},
               {"type": "major", "release": "major"},
-              {"type": "bug-fix", "release": "path"}
+              {"type": "bug-fix", "release": "patch"}
             ]
           }],
           ["@semantic-release/release-notes-generator", {
