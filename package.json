@@ -41,7 +41,9 @@
           ["@semantic-release/commit-analyzer", {
             "preset": "conventionalcommits",
             "releaseRules": [
-              {"type": "improvement", "release": "minor"}
+              {"type": "improvement", "release": "minor"},
+              {"type": "major", "release": "major"},
+              {"type": "bug-fix", "release": "path"}
             ]
           }],
           ["@semantic-release/release-notes-generator", {
@@ -59,7 +61,9 @@
                 {"type": "test", "section": "Tests", "hidden": true},
                 {"type": "build", "section": "Build System", "hidden": true},
                 {"type": "ci", "section": "Continuous Integration", "hidden": true},
-                {"type": "improvement", "section": "Improvement", "hidden": false}
+                {"type": "improvement", "section": "Improvement", "hidden": false},
+                {"type": "bug-fix", "section": "BugFix", "hidden": false},
+                {"type": "major", "section": "Major", "hidden": false}
               ]
             }
           }],
