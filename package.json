@@ -56,7 +56,26 @@
               ]
           }],
           ["@semantic-release/release-notes-generator", {
-            "preset": "conventionalcommits"
+            "preset": "conventionalcommits",
+            "presetConfig": {
+                "types": [
+                  {
+                    "message": "*\\[major\\]*",
+                    "section": "Major",
+                    "hidden": false
+                  },
+                  {
+                    "message": "*\\[bug-fix\\]*",
+                    "section": "Bug-Fix",
+                    "hidden": false
+                  },
+                  {
+                    "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                    "section": "Minor Changes",
+                    "hidden": false
+                  }
+                ]
+              }
            }],
           "@semantic-release/changelog",
           "@semantic-release/git",
