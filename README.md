@@ -1,2 +1,2 @@
 # semantic-release-tester
-Test Update - Major
+Test Update - Nw
