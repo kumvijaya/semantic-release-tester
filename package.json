@@ -46,7 +46,7 @@
                 "release": "major"
               },
               {
-                "type": "minor",
+                "message": "*[minor]*",
                 "release": "minor"
               },
               {
@@ -72,7 +72,7 @@
                     "hidden": false
                   },
                   {
-                    "type": "minor",
+                    "message": "*[minor]*",
                     "section": "📝 Minor Changes",
                     "hidden": false
                   }
