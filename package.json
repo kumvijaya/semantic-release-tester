@@ -68,7 +68,7 @@
                   "release": "minor"
                 },
                 {
-                  "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                  "message": "!(*\\[major\\]*|*\\[bugfix\\]*)",
                   "release": "minor"
                 }
               ],
@@ -86,7 +86,7 @@
                   {"type": "breaking", "section": "Breaking", "hidden": false},
                   {"type": "[bugfix]", "section": "Fix", "hidden": false},
                   {"subject": ".*", "section": "Minor changes", "hidden": false},
-                  {"message": "!(*\\[major\\]*|*\\[bug-fix\\]*)", "section": "Minor changes", "hidden": false}
+                  {"message": "!(*\\[major\\]*|*\\[bugfix\\]*)", "section": "Minor changes", "hidden": false}
                 ]
               }
             }],
