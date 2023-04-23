@@ -68,7 +68,7 @@
                   "release": "minor"
                 },
                 {
-                  "subject": ".*",
+                  "type": ".*",
                   "release": "minor"
                 }
               ],
