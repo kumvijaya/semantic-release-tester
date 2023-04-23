@@ -61,7 +61,7 @@
               "presetConfig": {
                 "types": [
                   {
-                    "message": "[major]*",
+                    "message": "[[]major[]]*",
                     "section": "✨ Major",
                     "hidden": false
                   },
