@@ -101,5 +101,6 @@
           [
             "@semantic-release/git"
           ]
+        ]
       }
   }
