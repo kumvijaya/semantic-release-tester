@@ -1,3 +1,11 @@
+# [4.7.0](https://github.com/kumvijaya/semantic-release-tester/compare/v4.6.0...v4.7.0) (2023-04-23)
+
+
+### major
+
+* update in preset types for commit check ([33bd9e7](https://github.com/kumvijaya/semantic-release-tester/commit/33bd9e7e6dafc221067a47df9347a11e0942abb9))
+* update in preset types for commit check ([605ee97](https://github.com/kumvijaya/semantic-release-tester/commit/605ee970b4cc18aeeab81dd246c9aa870a8fe515))
+
 ## [4.6.0](https://github.com/kumvijaya/semantic-release-tester/compare/v4.5.0...v4.6.0) (2023-04-23)
 
 ## [4.5.0](https://github.com/kumvijaya/semantic-release-tester/compare/v4.4.0...v4.5.0) (2023-04-23)
