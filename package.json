@@ -81,7 +81,7 @@
                 "types": [
                   {"type": "breaking", "section": "Breaking", "hidden": false},
                   {"type": "bugfix", "section": "Fix", "hidden": false},
-                  {"subject": ".*", "section": "Bug Fixes", "hidden": false}
+                  {"subject": ".*", "section": "Bug Fixes", "hidden": false},
                   {"message": ".*", "section": "Bug Fixes", "hidden": false}
                 ]
               }
