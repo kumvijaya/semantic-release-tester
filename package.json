@@ -50,17 +50,16 @@
                 "release": "minor"
               },
               {
+                "type": "*",
+                "release": "minor"
+              },
+              {
                   "type": "bugfix",
                   "release": "patch"
               },
               {
-                  "subject": "no-release:",
-                  "message": "no-release:",
+                  "scope": "no-release",
                   "release": false
-              },
-              {
-                "type": "*",
-                "release": "minor"
               }
               ],
             "parserOpts": {
@@ -77,8 +76,9 @@
                 "types": [
                   {"type": "major", "section": "Major updates", "hidden": false},
                   {"type": "minor", "section": "Minor updates", "hidden": false},
-                  {"type": "bugfix", "section": "Bug Fix", "hidden": false},
-                  {"type": "*", "section": "Minor changes", "hidden": false}
+                  {"type": "*", "section": "Minor changes", "hidden": false},
+                  {"type": "bugfix", "section": "Bug Fix", "hidden": false}
+                  
                 ]
               }
             }
