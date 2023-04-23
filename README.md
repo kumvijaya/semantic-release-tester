@@ -1,2 +1,2 @@
 # semantic-release-tester
-Test Update
+Test Updated
