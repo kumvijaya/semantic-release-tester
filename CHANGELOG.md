@@ -1,3 +1,5 @@
+## [4.5.0](https://github.com/kumvijaya/semantic-release-tester/compare/v4.4.0...v4.5.0) (2023-04-23)
+
 ## [4.4.0](https://github.com/kumvijaya/semantic-release-tester/compare/v4.3.0...v4.4.0) (2023-04-23)
 
 ## [4.3.0](https://github.com/kumvijaya/semantic-release-tester/compare/v4.2.0...v4.3.0) (2023-04-23)
