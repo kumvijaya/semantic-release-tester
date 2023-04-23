@@ -85,7 +85,7 @@
                 "types": [
                   {"type": "[major]", "section": "Major updates", "hidden": false},
                   {"type": "[minor]", "section": "Minor updates", "hidden": false},
-                  {"type": "[bugfix]", "section": "Bug Fixes", "hidden": false},
+                  {"type": "[bugfix]", "section": "Bug Fix", "hidden": false},
                   {"subject": ".*", "section": "Minor changes", "hidden": false},
                   {"message": "*", "section": "Minor changes", "hidden": false}
                 ]
