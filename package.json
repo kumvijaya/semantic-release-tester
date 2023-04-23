@@ -78,15 +78,7 @@
                   {"type": "major", "section": "Major updates", "hidden": false},
                   {"type": "minor", "section": "Minor updates", "hidden": false},
                   {"type": "bugfix", "section": "Bug Fix", "hidden": false},
-                  {"type": "*", "section": "Minor changes", "hidden": false},
-                  {"message": "*", "section": "Minor changes", "hidden": false}
-                ]
-              },
-              "parserOpts": {
-                "noteKeywords": [
-                  "major",
-                  "minor",
-                  "bugfix"
+                  {"type": "*", "section": "Minor changes", "hidden": false}
                 ]
               }
             }
