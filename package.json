@@ -52,19 +52,8 @@
               {
                   "type": "bugfix",
                   "release": "patch"
-              },
-              {
-                  "scope": "no-release",
-                  "release": false
               }
-              ],
-            "parserOpts": {
-              "noteKeywords": [
-                "major",
-                "minor",
-                "bugfix"
               ]
-            }
           }],
           [
             "@semantic-release/release-notes-generator",
