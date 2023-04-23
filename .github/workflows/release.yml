@@ -4,7 +4,7 @@ on:
     workflow_call:
     workflow_dispatch:
     push:
-       branches: [master]
+       branches: [main]
     pull_request:
         branches: [main]
 
@@ -20,9 +20,8 @@ jobs:
         uses: cycjimmy/semantic-release-action@v3
         id: semantic
         with:
-          # semantic_version: 16
           branches: |
-            ['master']
+            ['main']
           extra_plugins: |
             @semantic-release/commit-analyzer
             @semantic-release/release-notes-generator
