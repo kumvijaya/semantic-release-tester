@@ -1,3 +1,11 @@
+# [15.1.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.0.0...v15.1.0) (2023-04-23)
+
+
+### major
+
+* added few more initial features ([08c239f](https://github.com/kumvijaya/semantic-release-tester/commit/08c239fb8540155e1d34f7909e2c878305b243ce))
+* added few more initial features ([78b0c7f](https://github.com/kumvijaya/semantic-release-tester/commit/78b0c7fdeb52a1f1d9e487e5e37cb885a6ede76f))
+
 ## [15.0.0](https://github.com/kumvijaya/semantic-release-tester/compare/v14.0.0...v15.0.0) (2023-04-23)
 
 ## [14.0.0](https://github.com/kumvijaya/semantic-release-tester/compare/v13.0.0...v14.0.0) (2023-04-23)
