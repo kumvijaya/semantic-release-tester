@@ -65,7 +65,7 @@
                 {
                   "subject": "!no-release:*",
                   "message": "!no-release:*",
-                  "release": "patch"
+                  "release": "minor"
                 }
               ],
             "parserOpts": {
@@ -80,9 +80,9 @@
             "presetConfig": {
                 "types": [
                   {"type": "breaking", "section": "Breaking", "hidden": false},
-                  {"type": "bugfix", "section": "Fix", "hidden": false},
-                  {"subject": ".*", "section": "Bug Fixes", "hidden": false},
-                  {"message": ".*", "section": "Bug Fixes", "hidden": false}
+                  {"type": "[bugfix]", "section": "Fix", "hidden": false},
+                  {"subject": ".*", "section": "Minor changes", "hidden": false},
+                  {"message": ".*", "section": "Minor changes", "hidden": false}
                 ]
               }
             }],
