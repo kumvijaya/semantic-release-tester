@@ -22,7 +22,7 @@
     },
     "devDependencies": {
       "@octopusdeploy/octopackjs": "^0.2.4",
-      "semantic-release": "^17.3.4"
+      "semantic-release": "^21.0.1"
     },
     "release": {
         "branches": [
@@ -42,16 +42,16 @@
             "preset": "conventionalcommits",
             "releaseRules": [
               {
-                "type": "major",
+                "message": "*\\[major\\]*",
                 "release": "major"
               },
               {
-                "type": "minor",
-                "release": "minor"
+                "message": "*\\[bug-fix\\]*",
+                "release": "patch"
               },
               {
-                "type": "bugfix",
-                "release": "patch"
+                "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                "release": "minor"
               }
             ]
           }],
@@ -61,17 +61,17 @@
               "presetConfig": {
                 "types": [
                   {
-                    "type": "major",
+                    "message": "*\\[major\\]*",
                     "section": "✨ Major",
                     "hidden": false
                   },
                   {
-                    "type": "bugfix",
+                    "message": "*\\[bug-fix\\]*",
                     "section": "🐛 Bug-Fix",
                     "hidden": false
                   },
                   {
-                    "type": "minor",
+                    "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
                     "section": "📝 Minor Changes",
                     "hidden": false
                   }
