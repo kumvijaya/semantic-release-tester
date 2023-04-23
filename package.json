@@ -86,7 +86,7 @@
                   {"type": "breaking", "section": "Breaking", "hidden": false},
                   {"type": "[bugfix]", "section": "Fix", "hidden": false},
                   {"subject": ".*", "section": "Minor changes", "hidden": false},
-                  {"message": ".*", "section": "Minor changes", "hidden": false}
+                  {"message": "!(*\\[major\\]*|*\\[bug-fix\\]*)", "section": "Minor changes", "hidden": false}
                 ]
               }
             }],
