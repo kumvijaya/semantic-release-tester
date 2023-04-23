@@ -51,7 +51,7 @@
               },
               {
                 "message": "*",
-                "release": "minor"
+                "release": "patch"
               },
               {
                   "type": "bugfix",
@@ -70,7 +70,19 @@
               ]
             }
           }],
-          ["@semantic-release/release-notes-generator"],
+          ["@semantic-release/release-notes-generator", {
+            "preset": "conventionalcommits",
+            "presetConfig": {
+                "types": [
+                  {"type": "major", "section": "Major updates", "hidden": false},
+                  {"type": "minor", "section": "Minor updates", "hidden": false},
+                  {"message": "*", "section": "Minor changes", "hidden": false},
+                  {"type": "bugfix", "section": "Bug Fix", "hidden": false}
+                  
+                ]
+              }
+            }
+            ],
 
             [
               "@semantic-release/changelog",
