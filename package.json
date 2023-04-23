@@ -23,5 +23,73 @@
     "devDependencies": {
       "@octopusdeploy/octopackjs": "^0.2.4",
       "semantic-release": "^17.3.4"
-    }
+    },
+    "release": {
+        "branches": [
+          "master",
+          "main",
+          {
+            "name": "beta",
+            "prerelease": true
+          },
+          {
+            "name": "alpha",
+            "prerelease": true
+          }
+        ],
+        "plugins": [
+          ["@semantic-release/commit-analyzer", {
+            "preset": "conventionalcommits",
+            "releaseRules": [
+              {
+                "type": "major",
+                "release": "major"
+              },
+              {
+                "type": "minor",
+                "release": "minor"
+              },
+              {
+                  "type": "bugfix",
+                  "release": "patch"
+              }
+              ]
+          }],
+          [
+            "@semantic-release/release-notes-generator",
+            {
+              "preset": "conventionalcommits",
+              "presetConfig": {
+                "types": [
+                  {
+                    "type": "major",
+                    "section": "✨ Major",
+                    "hidden": false
+                  },
+                  {
+                    "type": "bugfix",
+                    "section": "🐛 Bug-Fix",
+                    "hidden": false
+                  },
+                  {
+                    "type": "minor",
+                    "section": "📝 Minor Changes",
+                    "hidden": false
+                  }
+                ]
+              }
+            }
+          ],
+
+          [
+            "@semantic-release/changelog"
+          ],
+          [
+            "@semantic-release/github"
+          ],
+          [
+            "@semantic-release/git"
+          ]
+        ]
+      }
   }
