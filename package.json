@@ -46,7 +46,7 @@
                 "release": "major"
               },
               {
-                "type": "[major]",
+                "type": "major",
                 "release": "major"
               },
               {
@@ -83,7 +83,7 @@
             "preset": "conventionalcommits",
             "presetConfig": {
                 "types": [
-                  {"type": "[major]", "section": "Major updates", "hidden": false},
+                  {"type": "major", "section": "Major updates", "hidden": false},
                   {"type": "[minor]", "section": "Minor updates", "hidden": false},
                   {"type": "[bugfix]", "section": "Bug Fix", "hidden": false},
                   {"subject": ".*", "section": "Minor changes", "hidden": false},
