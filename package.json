@@ -42,40 +42,33 @@
             "preset": "conventionalcommits",
             "releaseRules": [
               {
-                "type": "Breaking",
-                "release": "major"
-              },
-              {
                 "type": "major",
                 "release": "major"
               },
               {
-                "type": "[minor]",
+                "type": "minor",
                 "release": "minor"
               },
               {
                 "type": "[bugfix]",
                   "release": "patch"
-                },
-                {
+              },
+              {
                   "subject": "no-release:",
                   "message": "no-release:",
                   "release": false
-                },
-                {
+              },
+              {
                   "subject": "!no-release:*",
                   "message": "!no-release:*",
                   "release": "minor"
-                },
-                {
-                  "message": "tryregex",
-                  "release": "minor"
-                }
+              }
               ],
             "parserOpts": {
               "noteKeywords": [
                 "BREAKING CHANGE",
-                "BREAKING CHANGES"
+                "BREAKING CHANGES",
+                "[bugfix]"
               ]
             }
           }],
@@ -84,13 +77,22 @@
             "presetConfig": {
                 "types": [
                   {"type": "major", "section": "Major updates", "hidden": false},
-                  {"type": "[minor]", "section": "Minor updates", "hidden": false},
+                  {"type": "minor", "section": "Minor updates", "hidden": false},
                   {"type": "[bugfix]", "section": "Bug Fix", "hidden": false},
                   {"subject": ".*", "section": "Minor changes", "hidden": false},
                   {"message": "*", "section": "Minor changes", "hidden": false}
                 ]
+              },
+              "parserOpts": {
+                "noteKeywords": [
+                  "BREAKING CHANGE",
+                  "BREAKING CHANGES",
+                  "[bugfix]"
+                ]
               }
-            }],
+            }
+            ],
+
             [
               "@semantic-release/changelog",
               {
