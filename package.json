@@ -48,7 +48,7 @@
                   { "tag": "Chore", "release": "minor" },
                   { "tag": "bugfix", "release": "patch" },
                   { "tag": "major", "release": "major" },
-                  { "tag": "[minor]", "release": "minor" },
+                  { "tag": "minor", "release": "minor" },
                   { "message": "*", "release": "minor" },
                   { "tag": "New", "release": "minor" },
                   { "tag": "Update", "release": "minor" },
@@ -60,7 +60,7 @@
               "@semantic-release/release-notes-generator",
               {
                 "preset": "eslint",
-                "releaseRules": [
+                "types": [
                   { "tag": "Breaking", "release": "major" },
                   { "tag": "Build", "release": "minor" },
                   { "tag": "Chore", "release": "minor" },
