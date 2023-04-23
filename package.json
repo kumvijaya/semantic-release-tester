@@ -38,58 +38,40 @@
           }
         ],
         "plugins": [
-          ["@semantic-release/commit-analyzer", {
-            "preset": "conventionalcommits",
-            "releaseRules": [
+            [
+              "@semantic-release/commit-analyzer",
               {
-                "type": "Breaking",
-                "release": "major"
-              },
-              {
-                "type": "breaking",
-                "release": "major"
-              },
-              {
-                "type": "New",
-                "release": "minor"
-              },
-              {
-                "type": "[bugfix]",
-                  "release": "patch"
-                },
-                {
-                  "subject": "no-release:",
-                  "message": "no-release:",
-                  "release": false
-                },
-                {
-                  "subject": "!no-release:*",
-                  "message": "!no-release:*",
-                  "release": "minor"
-                },
-                {
-                  "message": "*",
-                  "release": "minor"
-                }
-              ],
-            "parserOpts": {
-              "noteKeywords": [
-                "BREAKING CHANGE",
-                "BREAKING CHANGES"
-              ]
-            }
-          }],
-          ["@semantic-release/release-notes-generator", {
-            "preset": "conventionalcommits",
-            "presetConfig": {
-                "types": [
-                  {"type": "breaking", "section": "Breaking", "hidden": false},
-                  {"type": "[bugfix]", "section": "Fix", "hidden": false},
-                  {"subject": ".*", "section": "Minor changes", "hidden": false},
-                  {"message": "*", "section": "Minor changes", "hidden": false}
+                "preset": "eslint",
+                "releaseRules": [
+                  { "tag": "Breaking", "release": "major" },
+                  { "tag": "Build", "release": "minor" },
+                  { "tag": "Chore", "release": "minor" },
+                  { "message": "*bugfix*", "release": "patch" },
+                  { "message": "*major*", "release": "major" },
+                  { "message": "*minor*", "release": "minor" },
+                  { "tag": "New", "release": "minor" },
+                  { "tag": "Update", "release": "minor" },
+                  { "tag": "Upgrade", "release": "minor" }
                 ]
               }
-            }],
+            ],
+            [
+              "@semantic-release/release-notes-generator",
+              {
+                "preset": "eslint",
+                "releaseRules": [
+                  { "tag": "Breaking", "release": "major" },
+                  { "tag": "Build", "release": "minor" },
+                  { "tag": "Chore", "release": "minor" },
+                  { "message": "*bugfix*", "section": "Bug-Fix", "hidden": false },
+                  { "message": "*major*", "section": "Major Updates", "hidden": false },
+                  { "message": "*minor*", "section": "Minor Updates", "hidden": false },
+                  { "tag": "New", "release": "minor" },
+                  { "tag": "Update", "release": "minor" },
+                  { "tag": "Upgrade", "release": "minor" }
+                ]
+              }
+            ],
             [
               "@semantic-release/changelog",
               {

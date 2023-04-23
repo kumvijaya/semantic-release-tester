@@ -1,0 +1,108 @@
+{
+    "name": "semantic-release-tester",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/kumvijaya/semantic-release-tester.git"
+    },
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "export": "next build && next export"
+    },
+    "dependencies": {
+      "next": "^10.0.0",
+      "react": "17.0.1",
+      "react-dom": "17.0.1",
+      "date-fns": "^2.11.1",
+      "gray-matter": "^4.0.2",
+      "remark": "^12.0.0",
+      "remark-html": "^12.0.0"
+    },
+    "devDependencies": {
+      "@octopusdeploy/octopackjs": "^0.2.4",
+      "semantic-release": "^17.3.4"
+    },
+    "release": {
+        "branches": [
+          "master",
+          "main",
+          {
+            "name": "beta",
+            "prerelease": true
+          },
+          {
+            "name": "alpha",
+            "prerelease": true
+          }
+        ],
+        "plugins": [
+          ["@semantic-release/commit-analyzer", {
+            "preset": "conventionalcommits",
+            "releaseRules": [
+              {
+                "type": "Breaking",
+                "release": "major"
+              },
+              {
+                "type": "breaking",
+                "release": "major"
+              },
+              {
+                "type": "New",
+                "release": "minor"
+              },
+              {
+                "type": "[bugfix]",
+                  "release": "patch"
+                },
+                {
+                  "subject": "no-release:",
+                  "message": "no-release:",
+                  "release": false
+                },
+                {
+                  "subject": "!no-release:*",
+                  "message": "!no-release:*",
+                  "release": "minor"
+                },
+                {
+                  "message": "*",
+                  "release": "minor"
+                }
+              ],
+            "parserOpts": {
+              "noteKeywords": [
+                "BREAKING CHANGE",
+                "BREAKING CHANGES"
+              ]
+            }
+          }],
+          ["@semantic-release/release-notes-generator", {
+            "preset": "conventionalcommits",
+            "presetConfig": {
+                "types": [
+                  {"type": "breaking", "section": "Breaking", "hidden": false},
+                  {"type": "[bugfix]", "section": "Fix", "hidden": false},
+                  {"subject": ".*", "section": "Minor changes", "hidden": false},
+                  {"message": "*", "section": "Minor changes", "hidden": false}
+                ]
+              }
+            }],
+            [
+              "@semantic-release/changelog",
+              {
+                "changelogFile": "CHANGELOG.md"
+              }
+            ],
+            "@semantic-release/github",
+            [
+              "@semantic-release/git", {
+                "assets": ["package.json", "CHANGELOG.md"],
+                "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+              }
+            ]
+          ]
+      }
+  }
