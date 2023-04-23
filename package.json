@@ -68,7 +68,7 @@
                   "release": "minor"
                 },
                 {
-                  "message": ".*",
+                  "subject": ".*",
                   "release": "minor"
                 }
               ],
