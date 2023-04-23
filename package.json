@@ -46,7 +46,7 @@
                 "release": "major"
               },
               {
-                "message": "[[]bug-fix[]]*",
+                "message": "*bug-fix*",
                 "release": "patch"
               },
               {
@@ -64,7 +64,7 @@
                   "release": "major"
                 },
                 {
-                  "message": "[[]bug-fix[]]*",
+                  "message": "*bug-fix*",
                   "release": "patch"
                 },
                 {
