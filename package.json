@@ -58,25 +58,20 @@
           [
             "@semantic-release/release-notes-generator", {
               "preset": "eslint",
-              "presetConfig": {
-                "types": [
-                  {
-                    "message": "major*",
-                    "section": "✨ Major",
-                    "hidden": false
-                  },
-                  {
-                    "message": "[[]bug-fix[]]*",
-                    "section": "🐛 Bug-Fix",
-                    "hidden": false
-                  },
-                  {
-                    "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
-                    "section": "📝 Minor Changes",
-                    "hidden": false
-                  }
-                ]
-              }
+              "releaseRules":  [
+                {
+                  "message": "*major*",
+                  "release": "major"
+                },
+                {
+                  "message": "*\\[bug-fix\\]*",
+                  "release": "patch"
+                },
+                {
+                  "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
+                  "release": "minor"
+                }
+              ]
             }
           ],
 
