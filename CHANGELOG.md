@@ -1,3 +1,11 @@
+## [11.0.0](https://github.com/kumvijaya/semantic-release-tester/compare/v10.0.0...v11.0.0) (2023-04-23)
+
+
+### ✨ Major
+
+* First release with basic functions ([04cfbf3](https://github.com/kumvijaya/semantic-release-tester/commit/04cfbf3ac7ca9f79e5defd9106c3eeb9dc0857ee))
+* First release with basic functions ([f42abbc](https://github.com/kumvijaya/semantic-release-tester/commit/f42abbc1d451566e627acf19c99ecdc844f1d707))
+
 ## [10.0.0](https://github.com/kumvijaya/semantic-release-tester/compare/v9.0.0...v10.0.0) (2023-04-23)
 
 
