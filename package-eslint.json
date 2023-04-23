@@ -1,0 +1,94 @@
+{
+    "name": "semantic-release-tester",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/kumvijaya/semantic-release-tester.git"
+    },
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "export": "next build && next export"
+    },
+    "dependencies": {
+      "next": "^10.0.0",
+      "react": "17.0.1",
+      "react-dom": "17.0.1",
+      "date-fns": "^2.11.1",
+      "gray-matter": "^4.0.2",
+      "remark": "^12.0.0",
+      "remark-html": "^12.0.0"
+    },
+    "devDependencies": {
+      "@octopusdeploy/octopackjs": "^0.2.4",
+      "semantic-release": "^17.3.4"
+    },
+    "release": {
+        "branches": [
+          "master",
+          "main",
+          {
+            "name": "beta",
+            "prerelease": true
+          },
+          {
+            "name": "alpha",
+            "prerelease": true
+          }
+        ],
+        "plugins": [
+            [
+              "@semantic-release/commit-analyzer",
+              {
+                "preset": "eslint",
+                "releaseRules": [
+                  { "tag": "Breaking", "release": "major" },
+                  { "tag": "Build", "release": "minor" },
+                  { "tag": "Chore", "release": "minor" },
+                  { "tag": "bugfix", "release": "patch" },
+                  { "tag": "major", "release": "major" },
+                  { "tag": "minor", "release": "minor" },
+                  { "message": "*", "release": "minor" },
+                  { "tag": "New", "release": "minor" },
+                  { "tag": "Update", "release": "minor" },
+                  { "tag": "Upgrade", "release": "minor" }
+                ]
+              }
+            ],
+            [
+              "@semantic-release/release-notes-generator",
+              {
+                "preset": "eslint",
+                "presetConfig": {
+                    "types": [
+                    { "tag": "Breaking", "release": "major" },
+                    { "tag": "Build", "release": "minor" },
+                    { "tag": "Chore", "release": "minor" },
+                    { "tag": "bugfix", "section": "Bug fix", "hidden": false },
+                    { "tag": "major", "section": "Major updates", "hidden": false },
+                    { "tag": "minor", "section": "Minor updates", "hidden": false },
+                    { "message": "*", "section": "Minor Updates", "hidden": false },
+                    { "tag": "New", "release": "minor" },
+                    { "tag": "Update", "release": "minor" },
+                    { "tag": "Upgrade", "release": "minor" }
+                  ]
+               }
+              }
+            ],
+            [
+              "@semantic-release/changelog",
+              {
+                "changelogFile": "CHANGELOG.md"
+              }
+            ],
+            "@semantic-release/github",
+            [
+              "@semantic-release/git", {
+                "assets": ["package.json", "CHANGELOG.md"],
+                "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+              }
+            ]
+          ]
+      }
+  }
