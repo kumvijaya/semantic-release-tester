@@ -68,7 +68,7 @@
                   "release": "minor"
                 },
                 {
-                  "type": ".*",
+                  "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
                   "release": "minor"
                 }
               ],
