@@ -38,44 +38,59 @@
           }
         ],
         "plugins": [
-            [
-              "@semantic-release/commit-analyzer",
+          ["@semantic-release/commit-analyzer", {
+            "preset": "conventionalcommits",
+            "releaseRules": [
               {
-                "preset": "eslint",
-                "releaseRules": [
-                  { "tag": "Breaking", "release": "major" },
-                  { "tag": "Build", "release": "minor" },
-                  { "tag": "Chore", "release": "minor" },
-                  { "tag": "bugfix", "release": "patch" },
-                  { "tag": "major", "release": "major" },
-                  { "tag": "minor", "release": "minor" },
-                  { "message": "*", "release": "minor" },
-                  { "tag": "New", "release": "minor" },
-                  { "tag": "Update", "release": "minor" },
-                  { "tag": "Upgrade", "release": "minor" }
+                "type": "Breaking",
+                "release": "major"
+              },
+              {
+                "type": "[major]",
+                "release": "major"
+              },
+              {
+                "type": "[minor]",
+                "release": "minor"
+              },
+              {
+                "type": "[bugfix]",
+                  "release": "patch"
+                },
+                {
+                  "subject": "no-release:",
+                  "message": "no-release:",
+                  "release": false
+                },
+                {
+                  "subject": "!no-release:*",
+                  "message": "!no-release:*",
+                  "release": "minor"
+                },
+                {
+                  "message": "tryregex",
+                  "release": "minor"
+                }
+              ],
+            "parserOpts": {
+              "noteKeywords": [
+                "BREAKING CHANGE",
+                "BREAKING CHANGES"
+              ]
+            }
+          }],
+          ["@semantic-release/release-notes-generator", {
+            "preset": "conventionalcommits",
+            "presetConfig": {
+                "types": [
+                  {"type": "[major]", "section": "Major updates", "hidden": false},
+                  {"type": "[minor]", "section": "Minor updates", "hidden": false},
+                  {"type": "[bugfix]", "section": "Bug Fix", "hidden": false},
+                  {"subject": ".*", "section": "Minor changes", "hidden": false},
+                  {"message": "*", "section": "Minor changes", "hidden": false}
                 ]
               }
-            ],
-            [
-              "@semantic-release/release-notes-generator",
-              {
-                "preset": "eslint",
-                "presetConfig": {
-                    "types": [
-                    { "tag": "Breaking", "release": "major" },
-                    { "tag": "Build", "release": "minor" },
-                    { "tag": "Chore", "release": "minor" },
-                    { "tag": "bugfix", "section": "Bug fix", "hidden": false },
-                    { "tag": "major", "section": "Major updates", "hidden": false },
-                    { "tag": "minor", "section": "Minor updates", "hidden": false },
-                    { "message": "*", "section": "Minor Updates", "hidden": false },
-                    { "tag": "New", "release": "minor" },
-                    { "tag": "Update", "release": "minor" },
-                    { "tag": "Upgrade", "release": "minor" }
-                  ]
-               }
-              }
-            ],
+            }],
             [
               "@semantic-release/changelog",
               {
