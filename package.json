@@ -38,36 +38,54 @@
           }
         ],
         "plugins": [
-            [
-              "@semantic-release/commit-analyzer",
+          ["@semantic-release/commit-analyzer", {
+            "preset": "conventionalcommits",
+            "releaseRules": [
               {
-                "preset": "eslint",
-                "releaseRules": [
-                  { "tag": "Breaking", "release": "major" },
-                  { "tag": "Build", "release": "minor" },
-                  { "tag": "Chore", "release": "minor" },
-                  { "subject": "[bugfix]", "release": "patch" },
-                  { "tag": "New", "release": "minor" },
-                  { "tag": "Update", "release": "minor" },
-                  { "tag": "Upgrade", "release": "minor" }
+                "type": "Breaking",
+                "release": "major"
+              },
+              {
+                "type": "breaking",
+                "release": "major"
+              },
+              {
+                "type": "New",
+                "release": "minor"
+              },
+              {
+                "type": "[bugfix]",
+                  "release": "patch"
+                },
+                {
+                  "subject": "no-release:",
+                  "message": "no-release:",
+                  "release": false
+                },
+                {
+                  "subject": "!no-release:*",
+                  "message": "!no-release:*",
+                  "release": "patch"
+                }
+              ],
+            "parserOpts": {
+              "noteKeywords": [
+                "BREAKING CHANGE",
+                "BREAKING CHANGES"
+              ]
+            }
+          }],
+          ["@semantic-release/release-notes-generator", {
+            "preset": "conventionalcommits",
+            "presetConfig": {
+                "types": [
+                  {"type": "breaking", "section": "Breaking", "hidden": false},
+                  {"type": "bugfix", "section": "Fix", "hidden": false},
+                  {"subject": ".*", "section": "Bug Fixes", "hidden": false}
+                  {"message": ".*", "section": "Bug Fixes", "hidden": false}
                 ]
               }
-            ],
-            [
-              "@semantic-release/release-notes-generator",
-              {
-                "preset": "eslint",
-                "releaseRules": [
-                  { "tag": "Breaking", "release": "major" },
-                  { "tag": "Build", "release": "minor" },
-                  { "tag": "Chore", "release": "minor" },
-                  { "subject": "[bugfix]", "section": "FIX", "hidden": false },
-                  { "tag": "New", "release": "minor" },
-                  { "tag": "Update", "release": "minor" },
-                  { "tag": "Upgrade", "release": "minor" }
-                ]
-              }
-            ],
+            }],
             [
               "@semantic-release/changelog",
               {
