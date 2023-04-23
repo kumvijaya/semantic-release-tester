@@ -24,8 +24,8 @@
                 "release": "minor"
               },
               {
-                  "type": "bugfix",
-                  "release": "patch"
+                "type": "bugfix",
+                "release": "patch"
               }
               ]
           }],

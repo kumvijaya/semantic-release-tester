@@ -46,18 +46,17 @@
                 "release": "major"
               },
               {
-                "message": "*[minor]*",
+                "type": "minor",
                 "release": "minor"
               },
               {
-                  "type": "bugfix",
-                  "release": "patch"
+                "type": "bugfix",
+                "release": "patch"
               }
-              ]
+            ]
           }],
           [
-            "@semantic-release/release-notes-generator",
-            {
+            "@semantic-release/release-notes-generator", {
               "preset": "conventionalcommits",
               "presetConfig": {
                 "types": [
@@ -72,7 +71,7 @@
                     "hidden": false
                   },
                   {
-                    "message": "*[minor]*",
+                    "type": "minor",
                     "section": "📝 Minor Changes",
                     "hidden": false
                   }
