@@ -66,6 +66,11 @@
                   "subject": "!no-release:*",
                   "message": "!no-release:*",
                   "release": "minor"
+                },
+                {
+                  "subject": ".*",
+                  "message": ".*",
+                  "release": "minor"
                 }
               ],
             "parserOpts": {
