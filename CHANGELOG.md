@@ -1,3 +1,5 @@
+## [11.1.0](https://github.com/kumvijaya/semantic-release-tester/compare/v11.0.0...v11.1.0) (2023-04-23)
+
 ## [11.0.0](https://github.com/kumvijaya/semantic-release-tester/compare/v10.0.0...v11.0.0) (2023-04-23)
 
 
