@@ -1,3 +1,10 @@
+## [11.1.1](https://github.com/kumvijaya/semantic-release-tester/compare/v11.1.0...v11.1.1) (2023-04-23)
+
+
+### 🐛 Bug-Fix
+
+* bugfix with basic functions ([7d56a49](https://github.com/kumvijaya/semantic-release-tester/commit/7d56a492741905e8945c97085d208363891a56aa))
+
 ## [11.1.0](https://github.com/kumvijaya/semantic-release-tester/compare/v11.0.0...v11.1.0) (2023-04-23)
 
 ## [11.0.0](https://github.com/kumvijaya/semantic-release-tester/compare/v10.0.0...v11.0.0) (2023-04-23)
