@@ -39,7 +39,7 @@
         ],
         "plugins": [
           ["@semantic-release/commit-analyzer", {
-            "preset": "conventionalcommits",
+            "preset": "eslint",
             "releaseRules": [
               {
                 "message": "*major*",
@@ -57,7 +57,7 @@
           }],
           [
             "@semantic-release/release-notes-generator", {
-              "preset": "conventionalcommits",
+              "preset": "eslint",
               "presetConfig": {
                 "types": [
                   {
