@@ -61,12 +61,12 @@
               "presetConfig": {
                 "types": [
                   {
-                    "message": "[major]*",
+                    "message": "*\\[major\\]*",
                     "section": "✨ Major",
                     "hidden": false
                   },
                   {
-                    "message": "[bug-fix]*",
+                    "message": "*\\[bug-fix\\]*",
                     "section": "🐛 Bug-Fix",
                     "hidden": false
                   },
