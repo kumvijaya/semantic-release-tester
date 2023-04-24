@@ -1,3 +1,5 @@
+## [15.3.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.2.1...v15.3.0) (2023-04-24)
+
 ## [15.2.1](https://github.com/kumvijaya/semantic-release-tester/compare/v15.2.0...v15.2.1) (2023-04-24)
 
 # [15.2.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.1.0...v15.2.0) (2023-04-23)
