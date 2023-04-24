@@ -1,5 +1,12 @@
 # Changelog
 
+## [17.0.0](https://github.com/kumvijaya/semantic-release-tester/compare/v16.1.3...v17.0.0) (2023-04-24)
+
+
+### ✨ Major
+
+* [major]: added few more initial features ([f242c14](https://github.com/kumvijaya/semantic-release-tester/commit/f242c14ed4ffb23e2505cec3afcccd0c12381f9b))
+
 ## [16.1.3](https://github.com/kumvijaya/semantic-release-tester/compare/v16.1.2...v16.1.3) (2023-04-24)
 
 
