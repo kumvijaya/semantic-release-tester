@@ -34,11 +34,11 @@ module.exports = {
             
             // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
             if (commit.message.includes("[major]")) {
-                commit.type = `Major updates`
+                commit.type = `✨ Major`
             } else if (commit.message.includes("[bug-fix]")) {
-                commit.type = `Bug - Fix`
+                commit.type = `🐛 Bug-Fix`
             } else if (!(commit.message.includes("[major]") || commit.message.includes("[bug-fix]"))) {
-                commit.type = `Minor updates`
+                commit.type = `📝 Minor Changes`
             } else if (commit.type === `feat`) {
                 commit.type = `Features`
             } else if (commit.type === `fix`) {
@@ -69,9 +69,9 @@ module.exports = {
                 commit.scope = ``
             }
   
-            if (typeof commit.hash === `string`) {
-                commit.hash = commit.hash.substring(0, 7)
-            }
+            // if (typeof commit.hash === `string`) {
+            //     commit.hash = commit.hash.substring(0, 7)
+            // }
   
             if (typeof commit.subject === `string`) {
                 let url = context.repository
