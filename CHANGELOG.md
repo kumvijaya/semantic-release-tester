@@ -1,5 +1,12 @@
 # Changelog
 
+# [15.13.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.12.0...v15.13.0) (2023-04-24)
+
+
+### Minor updates
+
+* [minor]: added few more initial features ([](https://github.com/kumvijaya/semantic-release-tester/commit/dea3118))
+
 # [15.12.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.11.0...v15.12.0) (2023-04-24)
 
 # [15.11.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.10.0...v15.11.0) (2023-04-24)
