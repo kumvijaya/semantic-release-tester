@@ -34,7 +34,11 @@ module.exports = {
             
             // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
             console.log("Printing commit message:" + commit.message)
-            if (commit.message.includes("[minor]")) {
+            if (commit.message.includes("[major]")) {
+                commit.type = `Major updates`
+            } else if (commit.message.includes("[bug-fix]")) {
+                commit.type = `Bug - Fix`
+            } else if (!(commit.message.includes("[major]") || commit.message.includes("[bug-fix]"))) {
                 commit.type = `Minor updates`
             } else if (commit.type === `feat`) {
                 commit.type = `Features`

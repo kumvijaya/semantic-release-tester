@@ -15,5 +15,7 @@ module.exports = [
     {type: 'revert', release: 'patch'},
     {type: 'style', release: 'patch'},
     {type: 'test', release: 'patch'},
-    {message: "*[[]minor[]]*", release: "minor"}
+    {message: "*[[]major[]]*", release: "major"},
+    {message: "*[[]bug-fix[]]*", release: "patch"},
+    {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"}
   ];
