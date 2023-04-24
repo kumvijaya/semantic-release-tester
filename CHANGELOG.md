@@ -1,5 +1,13 @@
 # Changelog
 
+# [15.11.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.10.0...v15.11.0) (2023-04-24)
+
+
+### Features
+
+* **ci:** added few more initial features ([](https://github.com/kumvijaya/semantic-release-tester/commit/92b96dd))
+* **ci:** added few more initial features ([](https://github.com/kumvijaya/semantic-release-tester/commit/417617e))
+
 # [15.10.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.9.0...v15.10.0) (2023-04-24)
 
 
