@@ -53,7 +53,7 @@
                     "hidden": false
                   },
                   {
-                    "message": "*([)minor(])*",
+                    "message": "*\\[minor\\]*",
                     "section": "📝 Minor Changes",
                     "hidden": false
                   }
