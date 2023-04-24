@@ -3,6 +3,9 @@
 //
 // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
 module.exports = [
+    {message: "*[[]major[]]*", release: "major"},
+    {message: "*[[]bug-fix[]]*", release: "patch"},
+    {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"},
     {breaking: true, release: 'major'},
     // {type: 'build', release: 'patch'},
     // {type: 'chore', release: 'patch'},
@@ -14,8 +17,5 @@ module.exports = [
     {type: 'refactor', release: 'patch'},
     {type: 'revert', release: 'patch'},
     {type: 'style', release: 'patch'},
-    {type: 'test', release: 'patch'},
-    {message: "*[[]major[]]*", release: "major"},
-    {message: "*[[]bug-fix[]]*", release: "patch"},
-    {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"}
+    {type: 'test', release: 'patch'}
   ];

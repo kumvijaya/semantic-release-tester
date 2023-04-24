@@ -33,7 +33,6 @@ module.exports = {
             
             
             // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
-            console.log("Printing commit message:" + commit.message)
             if (commit.message.includes("[major]")) {
                 commit.type = `Major updates`
             } else if (commit.message.includes("[bug-fix]")) {
