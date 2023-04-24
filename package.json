@@ -23,12 +23,12 @@
             "preset": "conventionalcommits",
             "releaseRules": [
               {
-                "type": "major",
-                "release": "major"
+                  "type": "major",
+                  "release": "major"
               },
               {
-                "message": "*([)minor(])*",
-                "release": "minor"
+                  "message": "*([)minor(])*",
+                  "release": "minor"
               },
               {
                   "message": "*([)bug-fix(])*",
@@ -39,8 +39,28 @@
           [
             "@semantic-release/release-notes-generator",
             {
-              "preset": "conventionalcommits"
-            }],
+              "preset": "conventionalcommits",
+              "presetConfig": {
+                "types": [
+                  {
+                    "type": "major",
+                    "section": "✨ Major",
+                    "hidden": false
+                  },
+                  {
+                    "message": "*([)bug-fix(])*",
+                    "section": "🐛 Bug-Fix",
+                    "hidden": false
+                  },
+                  {
+                    "message": "*([)minor(])*",
+                    "section": "📝 Minor Changes",
+                    "hidden": false
+                  }
+                ]
+              }
+            }
+          ],
 
           [
             "@semantic-release/changelog"
