@@ -1,3 +1,15 @@
+# Changelog
+
+# [15.9.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.8.0...v15.9.0) (2023-04-24)
+
+
+### Features
+
+* **ci:** added few more initial features ([](https://github.com/kumvijaya/semantic-release-tester/commit/7b3be3b))
+* **ci:** added few more initial features ([](https://github.com/kumvijaya/semantic-release-tester/commit/00c9636))
+* **ci:** added few more initial features ([](https://github.com/kumvijaya/semantic-release-tester/commit/aa042e4))
+* **ci:** added few more initial features ([](https://github.com/kumvijaya/semantic-release-tester/commit/55746cf))
+
 ## [15.8.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.7.0...v15.8.0) (2023-04-24)
 
 ## [15.7.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.6.0...v15.7.0) (2023-04-24)
