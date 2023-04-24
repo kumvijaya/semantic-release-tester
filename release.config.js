@@ -68,6 +68,8 @@ module.exports = {
             if (commit.scope === `*`) {
                 commit.scope = ``
             }
+
+            console.log("commit.hash:" + commit.hash)
   
             // if (typeof commit.hash === `string`) {
             //     commit.hash = commit.hash.substring(0, 7)
