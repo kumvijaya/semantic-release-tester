@@ -50,7 +50,7 @@
                 "release": "minor"
               },
               {
-                  "type": "[[]bug-fix[]]*",
+                  "message": "[[]bug-fix[]]*",
                   "release": "patch"
               }
               ]
@@ -67,7 +67,7 @@
                     "hidden": false
                   },
                   {
-                    "type": "[[]bug-fix[]]*",
+                    "message": "[[]bug-fix[]]*",
                     "section": "🐛 Bug-Fix",
                     "hidden": false
                   },
