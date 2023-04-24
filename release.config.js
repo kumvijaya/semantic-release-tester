@@ -31,7 +31,7 @@ module.exports = {
                 note.title = `BREAKING CHANGES`
             })
 
-            console.log("Printing VK:" + commit.type)
+            console.log("Printing commit message:" + commit.message)
   
             // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
             if (commit.type === `feat`) {
