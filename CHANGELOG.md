@@ -1,5 +1,12 @@
 # Changelog
 
+# [16.1.0](https://github.com/kumvijaya/semantic-release-tester/compare/v16.0.0...v16.1.0) (2023-04-24)
+
+
+### Minor updates
+
+* adhoc update added few more initial features ([](https://github.com/kumvijaya/semantic-release-tester/commit/a60d5e9))
+
 # [16.0.0](https://github.com/kumvijaya/semantic-release-tester/compare/v15.13.0...v16.0.0) (2023-04-24)
 
 
