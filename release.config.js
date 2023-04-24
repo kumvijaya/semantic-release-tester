@@ -2,7 +2,7 @@ module.exports = {
     branch: 'main',
     plugins: [
         ['@semantic-release/commit-analyzer', {
-          preset: 'angular',
+          preset: 'conventionalcommits',
           releaseRules: './release-rules.js',
         }],
         '@semantic-release/release-notes-generator',
@@ -19,7 +19,7 @@ module.exports = {
         '@semantic-release/github',
     ],
     generateNotes: {
-      preset: 'angular',
+      preset: 'conventionalcommits',
       writerOpts: {
         // Required due to upstream bug preventing all types being displayed.
         // Bug: https://github.com/conventional-changelog/conventional-changelog/issues/317
