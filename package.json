@@ -39,21 +39,7 @@
           [
             "@semantic-release/release-notes-generator",
             {
-              "preset": "eslint",
-              "releaseRules": [
-                {
-                  "type": "major",
-                  "release": "major"
-                },
-                {
-                  "message": "*([)minor(])*",
-                  "release": "minor"
-                },
-                {
-                    "message": "*([)bug-fix(])*",
-                    "release": "patch"
-                }
-                ]
+              "preset": "eslint"
             }],
 
           [
