@@ -71,9 +71,9 @@ module.exports = {
 
             console.log("commit.hash:" + commit.hash)
   
-            // if (typeof commit.hash === `string`) {
-            //     commit.hash = commit.hash.substring(0, 7)
-            // }
+            if (typeof commit.hash === `string`) {
+                commit.shortHash = commit.hash.substring(0, 7)
+            }
   
             if (typeof commit.subject === `string`) {
                 let url = context.repository
