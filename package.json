@@ -27,11 +27,11 @@
                 "release": "major"
               },
               {
-                "type": "minor",
+                "type": "([)minor(])",
                 "release": "minor"
               },
               {
-                  "message": "*([)bugfix(])*",
+                  "type": "*([)bug-fix(])*",
                   "release": "patch"
               }
               ]
@@ -48,12 +48,12 @@
                     "hidden": false
                   },
                   {
-                    "message": "*([)bugfix(])*",
+                    "type": "*([)bug-fix(])*",
                     "section": "🐛 Bug-Fix",
                     "hidden": false
                   },
                   {
-                    "type": "minor",
+                    "type": "([)minor(])",
                     "section": "📝 Minor Changes",
                     "hidden": false
                   }
