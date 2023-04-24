@@ -30,13 +30,13 @@ module.exports = {
             commit.notes.forEach(note => {
                 note.title = `BREAKING CHANGES`
             })
-
+            
+            
+            // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
             console.log("Printing commit message:" + commit.message)
             if (commit.message.includes("[minor]")) {
                 commit.type = `Minor updates`
-            }  
-            // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
-            if (commit.type === `feat`) {
+            } else if (commit.type === `feat`) {
                 commit.type = `Features`
             } else if (commit.type === `fix`) {
                 commit.type = `Bug Fixes`
