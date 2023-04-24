@@ -39,24 +39,46 @@
         ],
         "plugins": [
           ["@semantic-release/commit-analyzer", {
-            "preset": "eslint",
+            "preset": "conventionalcommits",
             "releaseRules": [
               {
-                "message": "*major*",
+                "type": "major",
                 "release": "major"
               },
               {
-                "message": "*[[]bugfix[]]*",
-                "release": "patch"
+                "type": "minor",
+                "release": "minor"
               },
               {
-                "message": "!(*\\[major\\]*|*\\[bug-fix\\]*)",
-                "release": "minor"
+                  "type": "[[]bug-fix[]]*",
+                  "release": "patch"
               }
-            ]
+              ]
           }],
           [
-            "@semantic-release/release-notes-generator"
+            "@semantic-release/release-notes-generator",
+            {
+              "preset": "conventionalcommits",
+              "presetConfig": {
+                "types": [
+                  {
+                    "type": "major",
+                    "section": "✨ Major",
+                    "hidden": false
+                  },
+                  {
+                    "type": "[[]bug-fix[]]*",
+                    "section": "🐛 Bug-Fix",
+                    "hidden": false
+                  },
+                  {
+                    "type": "minor",
+                    "section": "📝 Minor Changes",
+                    "hidden": false
+                  }
+                ]
+              }
+            }
           ],
 
           [
