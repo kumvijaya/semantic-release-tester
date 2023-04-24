@@ -31,9 +31,10 @@ module.exports = {
                 note.title = `BREAKING CHANGES`
             })
             
-            
             // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
-            if (commit.message.includes("[major]")) {
+            if (commit.message.startsWith("Merge branch")) {
+                return
+            } else if (commit.message.includes("[major]")) {
                 commit.type = `✨ Major`
             } else if (commit.message.includes("[bug-fix]")) {
                 commit.type = `🐛 Bug-Fix`
@@ -68,8 +69,6 @@ module.exports = {
             if (commit.scope === `*`) {
                 commit.scope = ``
             }
-
-            console.log("commit.hash:" + commit.hash)
   
             if (typeof commit.hash === `string`) {
                 commit.shortHash = commit.hash.substring(0, 7)
