@@ -31,7 +31,7 @@
                 "release": "minor"
               },
               {
-                  "message": "*\\[bug-fix\\]*",
+                  "message": "*([)bugfix(])*",
                   "release": "patch"
               }
               ]
@@ -48,7 +48,7 @@
                     "hidden": false
                   },
                   {
-                    "message": "*\\[bug-fix\\]*",
+                    "message": "*([)bugfix(])*",
                     "section": "🐛 Bug-Fix",
                     "hidden": false
                   },
