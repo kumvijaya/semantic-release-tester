@@ -1,5 +1,18 @@
 # Changelog
 
+## [16.1.2](https://github.com/kumvijaya/semantic-release-tester/compare/v16.1.1...v16.1.2) (2023-04-24)
+
+
+### 🐛 Bug-Fix
+
+* [bug-fix]: added a fix ([](https://github.com/kumvijaya/semantic-release-tester/commit/af61edd203ffcb83656a99ab4a4d11a5a5b9ac31))
+* [bug-fix]: added a fix ([](https://github.com/kumvijaya/semantic-release-tester/commit/141a0537841f8b68b4535854dd8cbf9e89344ede))
+
+
+### 📝 Minor Changes
+
+* Merge branch 'main' of https://github.com/kumvijaya/semantic-release-tester ([](https://github.com/kumvijaya/semantic-release-tester/commit/6402718bc38a81350aaf18c8bba9d98e5b6542ad))
+
 ## [16.1.1](https://github.com/kumvijaya/semantic-release-tester/compare/v16.1.0...v16.1.1) (2023-04-24)
 
 
