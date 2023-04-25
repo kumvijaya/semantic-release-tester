@@ -1,5 +1,12 @@
 # Changelog
 
+## [17.4.0](https://github.com/kumvijaya/semantic-release-tester/compare/v17.3.0...v17.4.0) (2023-04-25)
+
+
+### 📝 Minor Changes
+
+* adhoc update removed other rst file writing ([8272fa1](https://github.com/kumvijaya/semantic-release-tester/commit/8272fa18bca12256ed9269041755a6f64a8e6220))
+
 ## [17.3.0](https://github.com/kumvijaya/semantic-release-tester/compare/v17.2.0...v17.3.0) (2023-04-25)
 
 
