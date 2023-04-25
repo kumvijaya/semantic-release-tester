@@ -1,5 +1,12 @@
 # Changelog
 
+## [17.6.0](https://github.com/kumvijaya/semantic-release-tester/compare/v17.5.0...v17.6.0) (2023-04-25)
+
+
+### 📝 Minor Changes
+
+* adhoc rmeoved unused code ([3f215f9](https://github.com/kumvijaya/semantic-release-tester/commit/3f215f907716a9647c840226e14d09dffa877dc2))
+
 ## [17.5.0](https://github.com/kumvijaya/semantic-release-tester/compare/v17.4.0...v17.5.0) (2023-04-25)
 
 
