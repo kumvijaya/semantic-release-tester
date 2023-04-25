@@ -26,8 +26,6 @@ jobs:
             @semantic-release/github
             @semantic-release/git
             @semantic-release/changelog
-            @semantic-release/exec
             conventional-changelog-conventionalcommits
-            conventional-changelog-eslint
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
