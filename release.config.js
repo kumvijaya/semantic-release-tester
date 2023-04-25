@@ -1,25 +1,35 @@
 module.exports = {
-    branch: 'main',
+    branches: [
+        'master',
+        'main',
+        {
+          name: 'beta',
+          prerelease: true
+        },
+        {
+          name: 'alpha',
+          prerelease: true
+        }
+      ],
     plugins: [
         ['@semantic-release/commit-analyzer', {
           preset: 'conventionalcommits',
-        //   releaseRules: './release-rules.js',
           releaseRules: [
             {message: "*[[]major[]]*", release: "major"},
             {message: "*[[]bug-fix[]]*", release: "patch"},
             {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"},
-            {breaking: true, release: 'major'},
+            // {breaking: true, release: 'major'},
             // {type: 'build', release: 'patch'},
             // {type: 'chore', release: 'patch'},
             // {type: 'ci', release: 'patch'},
-            {type: 'docs', release: 'patch'},
-            {type: 'feat', release: 'minor'},
-            {type: 'fix', release: 'patch'},
-            {type: 'perf', release: 'patch'},
-            {type: 'refactor', release: 'patch'},
-            {type: 'revert', release: 'patch'},
-            {type: 'style', release: 'patch'},
-            {type: 'test', release: 'patch'}
+            // {type: 'docs', release: 'patch'},
+            // {type: 'feat', release: 'minor'},
+            // {type: 'fix', release: 'patch'},
+            // {type: 'perf', release: 'patch'},
+            // {type: 'refactor', release: 'patch'},
+            // {type: 'revert', release: 'patch'},
+            // {type: 'style', release: 'patch'},
+            // {type: 'test', release: 'patch'}
           ]
         }],
         '@semantic-release/release-notes-generator',
@@ -38,9 +48,9 @@ module.exports = {
         transform: (commit, context) => {
             const issues = []
   
-            commit.notes.forEach(note => {
-                note.title = `BREAKING CHANGES`
-            })
+            // commit.notes.forEach(note => {
+            //     note.title = `BREAKING CHANGES`
+            // })
             
             // NOTE: Any changes here must be reflected in `CONTRIBUTING.md`.
             if (commit.message.startsWith("Merge branch")) {
@@ -51,28 +61,28 @@ module.exports = {
                 commit.type = `🐛 Bug-Fix`
             } else if (!(commit.message.includes("[major]") || commit.message.includes("[bug-fix]"))) {
                 commit.type = `📝 Minor Changes`
-            } else if (commit.type === `feat`) {
-                commit.type = `Features`
-            } else if (commit.type === `fix`) {
-                commit.type = `Bug Fixes`
-            } else if (commit.type === `perf`) {
-                commit.type = `Performance Improvements`
-            } else if (commit.type === `revert`) {
-                commit.type = `Reverts`
-            } else if (commit.type === `docs`) {
-                commit.type = `Documentation`
-            } else if (commit.type === `style`) {
-                commit.type = `Styles`
-            } else if (commit.type === `refactor`) {
-                commit.type = `Code Refactoring`
-            } else if (commit.type === `test`) {
-                commit.type = `Tests`
-            } else if (commit.type === `build`) {
-                commit.type = `Build System`
-            // } else if (commit.type === `chore`) {
-            //     commit.type = `Maintenance`
-            } else if (commit.type === `ci`) {
-                commit.type = `Continuous Integration`
+            // } else if (commit.type === `feat`) {
+            //     commit.type = `Features`
+            // } else if (commit.type === `fix`) {
+            //     commit.type = `Bug Fixes`
+            // } else if (commit.type === `perf`) {
+            //     commit.type = `Performance Improvements`
+            // } else if (commit.type === `revert`) {
+            //     commit.type = `Reverts`
+            // } else if (commit.type === `docs`) {
+            //     commit.type = `Documentation`
+            // } else if (commit.type === `style`) {
+            //     commit.type = `Styles`
+            // } else if (commit.type === `refactor`) {
+            //     commit.type = `Code Refactoring`
+            // } else if (commit.type === `test`) {
+            //     commit.type = `Tests`
+            // } else if (commit.type === `build`) {
+            //     commit.type = `Build System`
+            // // } else if (commit.type === `chore`) {
+            // //     commit.type = `Maintenance`
+            // } else if (commit.type === `ci`) {
+            //     commit.type = `Continuous Integration`
             } else {
                 return
             }
@@ -108,16 +118,15 @@ module.exports = {
                     })
                 }
             }
-  
+
             // remove references that already appear in the subject
             commit.references = commit.references.filter(reference => {
                 if (issues.indexOf(reference.issue) === -1) {
                     return true
                 }
-  
                 return false
             })
-  
+
             return commit
         },
       },
