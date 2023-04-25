@@ -3,30 +3,38 @@ module.exports = {
     plugins: [
         ['@semantic-release/commit-analyzer', {
           preset: 'conventionalcommits',
-          releaseRules: './release-rules.js',
+        //   releaseRules: './release-rules.js',
+          releaseRules: [
+            {message: "*[[]major[]]*", release: "major"},
+            {message: "*[[]bug-fix[]]*", release: "patch"},
+            {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"},
+            {breaking: true, release: 'major'},
+            // {type: 'build', release: 'patch'},
+            // {type: 'chore', release: 'patch'},
+            // {type: 'ci', release: 'patch'},
+            {type: 'docs', release: 'patch'},
+            {type: 'feat', release: 'minor'},
+            {type: 'fix', release: 'patch'},
+            {type: 'perf', release: 'patch'},
+            {type: 'refactor', release: 'patch'},
+            {type: 'revert', release: 'patch'},
+            {type: 'style', release: 'patch'},
+            {type: 'test', release: 'patch'}
+          ]
         }],
         '@semantic-release/release-notes-generator',
         ['@semantic-release/changelog', {
           changelogFile: 'CHANGELOG.md',
           changelogTitle: '# Changelog',
         }],
-        // ['@semantic-release/exec', {
-        //   prepareCmd: 'sh ./pre-commit_semantic-release.sh ${nextRelease.version}',
-        // }],
-        // ['@semantic-release/git', {
-        //   assets: ['*.md', 'docs/*.rst', 'FORMULA'],
-        // }],
         ['@semantic-release/git', {
-            assets: ['*.md'],
+            assets: ['*.md']
           }],
         '@semantic-release/github',
     ],
     generateNotes: {
       preset: 'conventionalcommits',
       writerOpts: {
-        // Required due to upstream bug preventing all types being displayed.
-        // Bug: https://github.com/conventional-changelog/conventional-changelog/issues/317
-        // Fix: https://github.com/conventional-changelog/conventional-changelog/pull/410
         transform: (commit, context) => {
             const issues = []
   
