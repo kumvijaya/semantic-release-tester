@@ -16,6 +16,9 @@ module.exports = {
         // ['@semantic-release/git', {
         //   assets: ['*.md', 'docs/*.rst', 'FORMULA'],
         // }],
+        ['@semantic-release/git', {
+            assets: ['*.md'],
+          }],
         '@semantic-release/github',
     ],
     generateNotes: {
