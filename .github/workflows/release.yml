@@ -18,7 +18,7 @@ jobs:
         uses: cycjimmy/semantic-release-action@v3
         id: semantic
         with:
-          semantic_version: 21.0.1
+          semantic_version: 19.0.5
           branches: |
             ['main']
           extra_plugins: |
