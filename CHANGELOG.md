@@ -1,5 +1,12 @@
 # Changelog
 
+## [17.9.0](https://github.com/kumvijaya/semantic-release-tester/compare/v17.8.0...v17.9.0) (2023-05-02)
+
+
+### 📝 Minor Changes
+
+* Update README.md (#4) ([2e9d138](https://github.com/kumvijaya/semantic-release-tester/commit/2e9d138ae0852a79d0ed442c827fe490ed6f8e8b)), closes [#4](https://github.com/kumvijaya/semantic-release-tester/issues/4)
+
 ## [17.8.0](https://github.com/kumvijaya/semantic-release-tester/compare/v17.7.1...v17.8.0) (2023-05-02)
 
 
