@@ -1,5 +1,16 @@
 # Changelog
 
+## [17.8.0](https://github.com/kumvijaya/semantic-release-tester/compare/v17.7.1...v17.8.0) (2023-05-02)
+
+
+### 📝 Minor Changes
+
+* updated sem release version ([e7eb52f](https://github.com/kumvijaya/semantic-release-tester/commit/e7eb52f91413c2af4fa5b5b5995324a80b3e01e8))
+* updated sem release version ([ef95959](https://github.com/kumvijaya/semantic-release-tester/commit/ef95959da2b603e39a9adc1d7d8902d85817402a))
+* updated sem release version ([c8ba634](https://github.com/kumvijaya/semantic-release-tester/commit/c8ba6340bc7769e2c5f7b9ffd113af8fe317baef))
+* updated sem release version ([9dcc5b4](https://github.com/kumvijaya/semantic-release-tester/commit/9dcc5b4b5661ac992a5fcb4b5d86290c977c9561))
+* Update README.md ([b9a1c4c](https://github.com/kumvijaya/semantic-release-tester/commit/b9a1c4cbf5aa58f5213757b63d4a9a029ecc0083))
+
 ## [17.7.1](https://github.com/kumvijaya/semantic-release-tester/compare/v17.7.0...v17.7.1) (2023-04-25)
 
 
