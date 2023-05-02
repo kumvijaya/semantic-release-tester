@@ -1,5 +1,12 @@
 # Changelog
 
+## [17.7.1](https://github.com/kumvijaya/semantic-release-tester/compare/v17.7.0...v17.7.1) (2023-04-25)
+
+
+### 🐛 Bug-Fix
+
+* [bug-fix]: test fix ([ea9dfd2](https://github.com/kumvijaya/semantic-release-tester/commit/ea9dfd2f087e29b98e3181830895394ba3b9f973))
+
 ## [17.7.0](https://github.com/kumvijaya/semantic-release-tester/compare/v17.6.0...v17.7.0) (2023-04-25)
 
 
