@@ -16,11 +16,13 @@ module.exports = {
         ['@semantic-release/commit-analyzer', {
           preset: 'conventionalcommits',
           parserOpts: {
+            console.log('in parserOpts')
             transform: (commit, context) => {
               console.log('commit.message in analyzer writerOpts:' + commit.message)
             }
           },
           writerOpts: {
+            console.log('in writerOpts')
             transform: (commit, context) => {
               console.log('commit.message in analyzer writerOpts:' + commit.message)
             }
