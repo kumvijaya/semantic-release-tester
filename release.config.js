@@ -47,6 +47,8 @@ module.exports = {
                 commit.type = `🐛 Bug-Fix`
             } else if (!(commit.message.includes("[major]") || commit.message.includes("[bug-fix]"))) {
                 commit.type = `📝 Minor Changes`
+            } else if (!(commit.subject.includes("[major]") || commit.subject.includes("[bug-fix]"))) {
+                commit.type = `📝 Minor Changes`
             } else {
                 return
             }
