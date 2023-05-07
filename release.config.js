@@ -16,11 +16,8 @@ module.exports = {
           preset: 'conventionalcommits',
           releaseRules: [
             {message: "*[[]major[]]*", release: "major"},
-            {subject: "*[[]major[]]*", release: "major"},
             {message: "*[[]bug-fix[]]*", release: "patch"},
-            {subject: "*[[]bug-fix[]]*", release: "patch"},
-            {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"},
-            {subject: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"}
+            {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"}
           ]
         }],
         '@semantic-release/release-notes-generator',
@@ -40,11 +37,11 @@ module.exports = {
 
             if (commit.message.startsWith("Merge branch")) {
                 return
-            } else if (commit.message.includes("[major]") || commit.subject.includes("[major]")) {
+            } else if (commit.message.includes("[major]")) {
                 commit.type = `✨ Major`
-            } else if (commit.message.includes("[bug-fix]") || commit.subject.includes("[bug-fix]")) {
+            } else if (commit.message.includes("[bug-fix]")) {
                 commit.type = `🐛 Bug-Fix`
-            } else if (!(commit.message.includes("[major]") || commit.message.includes("[bug-fix]")) || !(commit.subject.includes("[major]") || commit.subject.includes("[bug-fix]"))) {
+            } else if (!(commit.message.includes("[major]") || commit.message.includes("[bug-fix]"))) {
                 commit.type = `📝 Minor Changes`
             } else {
                 return
