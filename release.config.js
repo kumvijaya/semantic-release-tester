@@ -17,7 +17,11 @@ module.exports = {
           releaseRules: [
             {message: "*[[]major[]]*", release: "major"},
             {message: "*[[]bug-fix[]]*", release: "patch"},
-            {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"}
+            {message: "!(*[[]major[]]*|*[[]bug-fix[]]*)", release: "minor"},
+            {
+              subject: "!(*[[]major[]]*|*[[]bug-fix[]]*)",
+              release: "minor"
+            }
           ]
         }],
         '@semantic-release/release-notes-generator',
