@@ -1,3 +1,4 @@
+const rules = function (commit) {return a * b};
 module.exports = {
     branches: [
         'master',
@@ -14,6 +15,11 @@ module.exports = {
     plugins: [
         ['@semantic-release/commit-analyzer', {
           preset: 'conventionalcommits',
+          writerOpts: {
+            transform: (commit, context) => {
+              console.log('commit.message in analyzer writerOpts:' + commit.message)
+            }
+          },
           releaseRules: [
             {message: "*[[]major[]]*", release: "major"},
             {message: "*[[]bug-fix[]]*", release: "patch"},
